@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!--suppress HtmlUnknownAttribute -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>MOVIE</title>
+</head>
+<body>
+  <div th:each="movie: ${movies}">
+    <span th:text="${movie.id}"></span>
+    <span th:text="${movie.movName}"></span>
+    <span th:text="${movie.movYear}"></span>
+    <span th:text="${movie.movLang}"></span>
+   </div>
+</body>
+</html>
