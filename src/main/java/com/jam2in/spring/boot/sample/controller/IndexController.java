@@ -1,6 +1,6 @@
 package com.jam2in.spring.boot.sample.controller;
 
-import com.jam2in.spring.boot.sample.service.ProductService;
+import com.jam2in.spring.boot.sample.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
   @Autowired
-  private ProductService productService;
+  private MovieService movieService;
 
   @RequestMapping("/")
   public String index(Model model) {
-    model.addAttribute("movies", productService.getAll());
+    model.addAttribute("movies", movieService.getAll());
     return "index";
   }
 
