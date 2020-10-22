@@ -30,6 +30,7 @@
         SELECT *
         FROM movie
         WHERE id = #{id} AND movName = #{movie.movName} AND movYear = #{movie.movYear} AND movLang = #{movie.movLang}
+
     </select>
 
     <select id="selectAll" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">

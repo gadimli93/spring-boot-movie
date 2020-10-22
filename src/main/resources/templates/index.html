@@ -5,14 +5,24 @@
   <meta charset="UTF-8">
   <title>MOVIE</title>
 </head>
-<body>
-
-<h3>All time best 100+ Movies</h3>
-   <div th:each="movie: ${movies}">
-    <span th:text="${movie.id}"></span>
-    <span th:text="${movie.movName}"></span>
-    <span th:text="${movie.movYear}"></span>
-    <span th:text="${movie.movLang}"></span>
-   </div>
+<body style="background-color: #FFFFE0;">
+<h1 align="center"> All Time Best 100+ Movie List</h1>
+  <table style="text-align: left; font-size: 18px;">
+      <thead>
+      <tr style="color: black; font-size:20px;">
+          <th bgcolor= #BDB76B width="50">No.</th>
+          <th bgcolor= #BDB76B align="center" width="500">Title</th>
+          <th bgcolor= #BDB76B align="center" width="50">Year</th>
+          <th bgcolor= #BDB76B align="center" width="100">Language</th>
+      </tr>
+      </thead>
+      <tbody bgcolor= #FFFFE0>
+        <tr th:each="movie: ${movies}">
+            <td th:text="${movie.id}">&nbsp;</td>
+            <td th:text="${movie.movName}">&nbsp;</td>
+            <td align="center" th:text="${movie.movYear}">&nbsp;</td>
+            <td align="right" th:text="${movie.movLang}">&nbsp;</td>
+      </tbody>
+  </table>
  </body>
 </html>

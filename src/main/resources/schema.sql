@@ -102,12 +102,12 @@ INSERT INTO movie (movName, movYear, movLang) VALUES ('Schindler`s List', 1993, 
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Inglourious Basterds', 2009, 'English');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Life is Beautiful', 1997, 'Italian');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('In Search of Beethoven', 2009, 'English');
+INSERT INTO movie (movName, movYear, movLang) VALUES ('Chaplin', 1992, 'English');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: Modern Times', 1936, 'Silence Film');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: The Great Dictator', 1940, 'Silence Film');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: The Kid', 1921, 'Silence Film');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: The Gold Rush', 1925, 'Silence Film');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: The Circus', 1928, 'Silence Film');
-INSERT INTO movie (movName, movYear, movLang) VALUES ('Chaplin', 1992, 'English');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: A Dog`s Life', 1918, 'Silence Film');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: The Immigrant', 1917, 'Silence Film');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Charlie Chaplin: The Floorwalker', 1916, 'Silence Film');
