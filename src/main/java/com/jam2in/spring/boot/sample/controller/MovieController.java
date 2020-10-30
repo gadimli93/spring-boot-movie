@@ -61,7 +61,8 @@ public class MovieController {
   @GetMapping("/{movName}/{movYear}/{movLang}/{id}")
   @ResponseStatus(code = HttpStatus.OK)
   @ResponseBody
-  public MovieDto getByIdAndName(@PathVariable long id, @PathVariable String movName, @PathVariable Integer movYear, @PathVariable String movLang) {
+  public MovieDto getByIdAndName(@PathVariable long id, @PathVariable String movName,
+                                 @PathVariable Integer movYear, @PathVariable String movLang) {
     MovieDto movieDto = new MovieDto();
     movieDto.setId(id);
     movieDto.setMovName(movName);
@@ -75,6 +76,7 @@ public class MovieController {
   @ResponseStatus(code = HttpStatus.OK)
   @ResponseBody
   public List<MovieDto> getAll() {
+
     return movieService.getAll();
   }
 
