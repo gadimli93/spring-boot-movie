@@ -17,18 +17,18 @@ public class IndexController {
   @Autowired
   private MovieService movieService;
 
- // //localhost:8080/movies/getall
-  //@RequestMapping("/movies/getall")
-  //public String index(Model model) {
-  //model.addAttribute("movies", movieService.getAll());
-  // return "index";
- // }
+ //localhost:8080/movies/getall
+  @RequestMapping("/movies/getall")
+  public String index(Model model) {
+  model.addAttribute("movies", movieService.getAll());
+  return "index";
+ }
 
-  //localhost:8080/movies/?movLang=
-  @RequestMapping ("/movies/?movLang=Korean" )
+ /* //localhost:8080/movies/?movLang=
+  @RequestMapping ("/movies/?movLang=English")
   public String index (Model model, @RequestParam String movLang) {
     model.addAttribute("movies", movieService.getAllByLang(movLang));
     return "index";
-  }
+  }*/
 
 }

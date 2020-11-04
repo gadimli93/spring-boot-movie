@@ -71,19 +71,19 @@ public class MovieController {
     return movieService.getByDto(movieDto);
   }
 
-  /* // GET http://localhost:8080/movies
+   // GET http://localhost:8080/movies
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
   @ResponseBody
   public List<MovieDto> getAll() {
     return movieService.getAll();
-  } */
+  }
 
-  //GET http://localhost:8080/movies/?movLang=
+  /*//GET http://localhost:8080/movies/?movLang=
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
   @ResponseBody
   public List<MovieDto> getAllByLang() {
-    return movieService.getAllByLang("Korean");
-  }
+    return movieService.getAllByLang("English");
+  } */
   }

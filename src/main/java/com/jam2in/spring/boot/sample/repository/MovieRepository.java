@@ -19,7 +19,7 @@ public interface MovieRepository {
   MovieDto select(long id);
 
   MovieDto selectByIdAndName(@Param("id") long id, @Param("movName") String movName,
-                             @Param("movYear") Integer movYear, @Param("Korea") String movLang);
+                             @Param("movYear") Integer movYear, @Param("movLang") String movLang);
   List<MovieDto> selectAll();
 
   List<MovieDto> selectAllByLang(String movLang);
