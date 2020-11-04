@@ -33,9 +33,9 @@ public class MovieService {
     return movieRepository.select(id);
   }
 
- // public MovieDto get(long id, String movName, Integer movYear, String movLang) {
-   // return movieRepository.selectByIdAndName(id, movName, movYear,movLang);
-//  }
+ public MovieDto get(long id, String movName, Integer movYear, String movLang) {
+   return movieRepository.selectByIdAndName(id, movName, movYear,movLang);
+ }
 
   public MovieDto getByDto(MovieDto movieDto) {
     return movieRepository.selectByIdAndName(movieDto.getId(), movieDto.getMovName(),
@@ -44,9 +44,11 @@ public class MovieService {
 
   public List<MovieDto> getAll() {
     return movieRepository.selectAll();
-  }
+    }
 
   public List<MovieDto> getAllByLang(String movLang) {
     return movieRepository.selectAllByLang(movLang);
   }
+
+
 }
