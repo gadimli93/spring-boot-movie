@@ -24,4 +24,6 @@ public interface MovieRepository {
 
   List<MovieDto> selectAllByLang(String movLang);
 
+  List<MovieDto> selectAllByYear(Integer movYear);
+
 }

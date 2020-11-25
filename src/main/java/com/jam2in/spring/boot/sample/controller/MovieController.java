@@ -71,19 +71,27 @@ public class MovieController {
     return movieService.getByDto(movieDto);
   }
 
-   // GET http://localhost:8080/movies
+  /*/ GET http://localhost:8080/movies
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
   @ResponseBody
   public List<MovieDto> getAll() {
     return movieService.getAll();
-  }
+  } */
 
-  /*//GET http://localhost:8080/movies/?movLang=
+  //GET http://localhost:8080/movies/?movLang=
   @GetMapping
   @ResponseStatus(code = HttpStatus.OK)
   @ResponseBody
   public List<MovieDto> getAllByLang() {
     return movieService.getAllByLang("English");
+  }
+
+ /* //GET http://localhost:8080/movies/?movYear=
+  @GetMapping
+  @ResponseStatus(code = HttpStatus.OK)
+  @ResponseBody
+  public List<MovieDto> getAllByYear() {
+    return movieService.getAllByYear(2001);
   } */
   }

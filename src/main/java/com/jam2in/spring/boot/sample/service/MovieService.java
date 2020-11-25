@@ -50,5 +50,9 @@ public class MovieService {
     return movieRepository.selectAllByLang(movLang);
   }
 
+    public List<MovieDto> getAllByYear(Integer movYear) {
+        return movieRepository.selectAllByYear(movYear);
+    }
+
 
 }

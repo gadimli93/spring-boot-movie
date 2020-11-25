@@ -38,6 +38,12 @@
         WHERE movLang = #{movie.movLang}
     </select>
 
+    <select id="selectAllByYear" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
+        SELECT *
+        FROM movie
+        WHERE movLang = #{movie.movYear}
+    </select>
+
     <select id="selectAll" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
         SELECT *
         FROM movie;

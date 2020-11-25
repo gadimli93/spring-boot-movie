@@ -203,3 +203,6 @@ INSERT INTO movie (movName, movYear, movLang) VALUES ('Pirates of the Caribbean:
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Pirates of the Caribbean: At World`s End', 2007, 'English');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Pirates of the Caribbean: On Stranger Tides', 2011, 'English');
 INSERT INTO movie (movName, movYear, movLang) VALUES ('Pirates of the Caribbean: Salazar`s Revenge', 2017, 'English');
+INSERT INTO movie (movName, movYear, movLang) VALUES ('Midnight Runners', 2017, 'Korean');
+INSERT INTO movie (movName, movYear, movLang) VALUES ('Assassination ', 2015, 'Korean');
+INSERT INTO movie (movName, movYear, movLang) VALUES ('A Violent Prosecutor', 2016, 'Korean');
