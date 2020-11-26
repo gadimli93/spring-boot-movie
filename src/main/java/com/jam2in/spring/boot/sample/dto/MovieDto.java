@@ -36,4 +36,13 @@ public class MovieDto implements Serializable {
 
   public void setMovLang(String movLang) { this.movLang = movLang; }
 
+  @Override
+  public String toString() {
+    return "MovieDto{" +
+        "id=" + id +
+        ", movName='" + movName + '\'' +
+        ", movYear=" + movYear +
+        ", movLang='" + movLang + '\'' +
+        '}';
+  }
 }
