@@ -22,13 +22,13 @@
     <table align="center" border="none">
       <tr style="color: black; font-size:20px;">
         <!-- <input name= is matching with "@ModelAttribute MovieDto.movName" -->
-      <td style="background-color:#A4C5D2">No.</td><td><input style="width: 95%;" name="id"th:field="${movie.id}" readonly /></td>
+      <td style="background-color:#A4C5D2">No.</td><td><input style="width: 98%;" name="id"th:field="${movie.id}" readonly /></td>
       </tr>
       <tr style="color: black; font-size:20px;">
         <td style="background-color:#A4C5D2">Title</td> <td><input name="movName" size="50" type="text" th:field="${movie.movName}" required /></td>
       </tr>
       <tr style="color: black; font-size:20px;">
-        <td style="background-color:#A4C5D2">Year</td> <td><input style="width: 95%;" name="movYear" size="50" type="number" th:field="${movie.movYear}" required /></td>
+        <td style="background-color:#A4C5D2">Year</td> <td><input style="width: 98%;" name="movYear" size="50" type="number" th:field="${movie.movYear}" required /></td>
       </tr>
       <tr style="color: black; font-size:20px;">
         <td style="background-color:#A4C5D2">Language</td> <td><input name="movLang" size="50" type="text" th:field="${movie.movLang}" required /></td>
@@ -40,7 +40,7 @@
 <!-- Delete movie from the list by movie id -->
   <form method="post" action="/movies/delete.do">
     <input name="id" th:field="${movie.id}" />
-    <button type="submit">Delete</button>
+    <button style="color:white; background-color:#f22613; float:center" type="submit">Delete</button>
   </form>
  </body>
 </html>
