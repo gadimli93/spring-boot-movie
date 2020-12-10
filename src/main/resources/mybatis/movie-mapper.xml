@@ -29,24 +29,36 @@
     <select id="selectByIdAndName" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
         SELECT *
         FROM movie
-        WHERE id = #{id} AND movName = #{movie.movName} AND movYear = #{movie.movYear} AND movLang = #{movie.movLang}
+        WHERE id = #{id} AND movName = #{movName} <!-- AND movYear = #{movie.movYear} AND movLang = #{movie.movLang} -->
     </select>
 
     <select id="selectAllByLang" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
         SELECT *
         FROM movie
-        WHERE movLang = #{movie.movLang}
+        WHERE movLang = #{movLang}
     </select>
 
     <select id="selectAllByYear" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
         SELECT *
         FROM movie
-        WHERE movLang = #{movie.movYear}
+        WHERE movYear = #{movYear}
+    </select>
+
+    <select id="selectAllByName" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
+        SELECT *
+        FROM movie
+        WHERE movName = #{movName}
     </select>
 
     <select id="selectAll" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
         SELECT *
         FROM movie;
+    </select>
+
+    <select id="selectAllByParam" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
+        SELECT *
+        FROM movie;
+        WHERE movName = #{movName} AND movYear = #{movYear} AND  movLang = #{movLang}
     </select>
 
 </mapper>

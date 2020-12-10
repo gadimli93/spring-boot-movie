@@ -33,26 +33,28 @@ public class MovieService {
     return movieRepository.select(id);
   }
 
- public MovieDto get(long id, String movName, Integer movYear, String movLang) {
-   return movieRepository.selectByIdAndName(id, movName, movYear,movLang);
- }
+  public MovieDto getByIdAndName(long id, String movName) {
+   return movieRepository.selectByIdAndName(id, movName);
+   }
 
-  public MovieDto getByDto(MovieDto movieDto) {
-    return movieRepository.selectByIdAndName(movieDto.getId(), movieDto.getMovName(),
-                                    movieDto.getMovYear(), movieDto.getMovLang());
-  }
 
   public List<MovieDto> getAll() {
     return movieRepository.selectAll();
     }
 
+  public List<MovieDto> getAllByParam(String movName, Integer movYear, String movLang) {
+    return movieRepository.selectAllByParam(movName, movYear, movLang);
+  }
+
   public List<MovieDto> getAllByLang(String movLang) {
     return movieRepository.selectAllByLang(movLang);
   }
 
-    public List<MovieDto> getAllByYear(Integer movYear) {
+  public List<MovieDto> getAllByYear(Integer movYear) {
         return movieRepository.selectAllByYear(movYear);
     }
 
-
+    public List<MovieDto> getAllByName(String movName) {
+    return movieRepository.selectAllByName(movName);
+    }
 }

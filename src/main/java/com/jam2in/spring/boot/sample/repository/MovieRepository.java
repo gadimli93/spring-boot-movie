@@ -17,13 +17,18 @@ public interface MovieRepository {
   void delete(long id);
 
   MovieDto select(long id);
-
-  MovieDto selectByIdAndName(@Param("id") long id, @Param("movName") String movName,
-                             @Param("movYear") Integer movYear, @Param("movLang") String movLang);
-  List<MovieDto> selectAll();
+  MovieDto selectByIdAndName(@Param("id") long id, @Param("movName") String movName);
 
   List<MovieDto> selectAllByLang(String movLang);
 
   List<MovieDto> selectAllByYear(Integer movYear);
+
+  List<MovieDto> selectAllByName(String movName);
+
+  List<MovieDto> selectAll();
+
+  List<MovieDto> selectAllByParam(@Param("movName") String movName,
+                                  @Param("movYear") Integer movYear,
+                                  @Param("movLang") String movLang);
 
 }

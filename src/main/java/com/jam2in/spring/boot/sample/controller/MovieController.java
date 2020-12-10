@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
+import org.springframework.util.NumberUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,13 +18,15 @@ public class MovieController {
   private MovieService movieService;
 
   @RequestMapping(value = "/", method = RequestMethod.GET)
-  public String getMovies(@RequestParam(required = false) String movLang, Model model) {
+  public String getMovies(@RequestParam(required = false) String movLang,
+                          @RequestParam(required = false) String movName,
+                          @RequestParam(required = false) Integer movYear, Model model) {
     List<MovieDto> movies;
 
-    if (movLang == null || StringUtils.isEmpty(movLang)) {
+    if (StringUtils.isEmpty(movName) && movYear == null && StringUtils.isEmpty(movLang)) {
       movies = movieService.getAll();
     } else {
-      movies = movieService.getAllByLang(movLang);
+      movies = movieService.getAllByParam(movName, movYear, movLang);
     }
 
     model.addAttribute("movies", movies);
