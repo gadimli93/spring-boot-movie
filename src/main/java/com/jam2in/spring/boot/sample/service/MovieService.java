@@ -37,24 +37,8 @@ public class MovieService {
    return movieRepository.selectByIdAndName(id, movName);
    }
 
-
-  public List<MovieDto> getAll() {
-    return movieRepository.selectAll();
-    }
-
-  public List<MovieDto> getAllByParam(String movName, Integer movYear, String movLang) {
-    return movieRepository.selectAllByParam(movName, movYear, movLang);
+  public List<MovieDto> getAll(String movName, Integer movYear, String movLang) {
+    return movieRepository.selectAll(movName, movYear, movLang);
   }
 
-  public List<MovieDto> getAllByLang(String movLang) {
-    return movieRepository.selectAllByLang(movLang);
-  }
-
-  public List<MovieDto> getAllByYear(Integer movYear) {
-        return movieRepository.selectAllByYear(movYear);
-    }
-
-    public List<MovieDto> getAllByName(String movName) {
-    return movieRepository.selectAllByName(movName);
-    }
 }

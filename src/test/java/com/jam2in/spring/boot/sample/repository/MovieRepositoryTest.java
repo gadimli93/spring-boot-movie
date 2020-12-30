@@ -16,6 +16,7 @@ import java.util.List;
 @SpringBootTest
 public class MovieRepositoryTest {
 
+    /*
     @Autowired
     private MovieRepository movieRepository;
 
@@ -309,4 +310,6 @@ public class MovieRepositoryTest {
             }
         }
     }
+     */
+
 }

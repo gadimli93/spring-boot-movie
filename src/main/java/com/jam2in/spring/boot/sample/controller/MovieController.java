@@ -21,13 +21,7 @@ public class MovieController {
   public String getMovies(@RequestParam(required = false) String movLang,
                           @RequestParam(required = false) String movName,
                           @RequestParam(required = false) Integer movYear, Model model) {
-    List<MovieDto> movies;
-
-    if (StringUtils.isEmpty(movName) && movYear == null && StringUtils.isEmpty(movLang)) {
-      movies = movieService.getAll();
-    } else {
-      movies = movieService.getAllByParam(movName, movYear, movLang);
-    }
+    List<MovieDto> movies = movieService.getAll(movName, movYear, movLang);
 
     model.addAttribute("movies", movies);
     return "index";       // response with the index.html page

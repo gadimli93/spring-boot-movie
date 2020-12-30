@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
-    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jam2in.spring.boot.sample.repository.MovieRepository">
 
     <insert id="insert" useGeneratedKeys="true" keyProperty="id">
@@ -32,33 +32,20 @@
         WHERE id = #{id} AND movName = #{movName} <!-- AND movYear = #{movie.movYear} AND movLang = #{movie.movLang} -->
     </select>
 
-    <select id="selectAllByLang" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
-        SELECT *
-        FROM movie
-        WHERE movLang = #{movLang}
-    </select>
-
-    <select id="selectAllByYear" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
-        SELECT *
-        FROM movie
-        WHERE movYear = #{movYear}
-    </select>
-
-    <select id="selectAllByName" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
-        SELECT *
-        FROM movie
-        WHERE movName = #{movName}
-    </select>
-
     <select id="selectAll" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
         SELECT *
-        FROM movie;
-    </select>
-
-    <select id="selectAllByParam" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
-        SELECT *
-        FROM movie;
-        WHERE movName = #{movName} AND movYear = #{movYear} AND  movLang = #{movLang}
+        FROM movie
+        <where>
+            <if test="movName != null and movName != '' ">
+                AND movie.movName = #{movName}
+            </if>
+            <if test="movYear != null and movYear != '' ">
+                AND movie.movYear like #{movYear}
+            </if>
+            <if test="movLang != null and movLang != '' ">
+                AND movie.movLang like #{movLang}
+            </if>
+        </where>
     </select>
 
 </mapper>
