@@ -26,12 +26,6 @@
         WHERE id = #{id}
     </select>
 
-    <select id="selectByIdAndName" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
-        SELECT *
-        FROM movie
-        WHERE id = #{id} AND movName = #{movName} <!-- AND movYear = #{movie.movYear} AND movLang = #{movie.movLang} -->
-    </select>
-
     <select id="selectAll" resultType="com.jam2in.spring.boot.sample.dto.MovieDto">
         SELECT *
         FROM movie
@@ -47,5 +41,4 @@
             </if>
         </where>
     </select>
-
 </mapper>

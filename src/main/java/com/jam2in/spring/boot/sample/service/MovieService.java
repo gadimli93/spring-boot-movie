@@ -29,9 +29,13 @@ public class MovieService {
     movieRepository.delete(id);
   }
 
+     // TODO: apply cache and arcus client
+
   public MovieDto get(long id) {
     return movieRepository.select(id);
   }
+
+    // TODO: apply cache and arcus client
 
   public List<MovieDto> getAll(String movName, Integer movYear, String movLang) {
     return movieRepository.selectAll(movName, movYear, movLang);
