@@ -33,7 +33,6 @@ public class MovieDto implements Serializable {
   }
 
   public void setMovYear(Integer movYear) { this.movYear = movYear; }
-
   public void setMovLang(String movLang) { this.movLang = movLang; }
 
   @Override
