@@ -5,8 +5,6 @@ import com.jam2in.spring.boot.sample.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.util.NumberUtils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,8 +19,8 @@ public class MovieController {
   public String getMovies(@RequestParam(required = false) String movLang,
                           @RequestParam(required = false) String movName,
                           @RequestParam(required = false) Integer movYear, Model model) {
+    
     List<MovieDto> movies = movieService.getAll(movName, movYear, movLang);
-
     model.addAttribute("movies", movies);
     return "index";       // response with the index.html page
   }
@@ -32,7 +30,6 @@ public class MovieController {
     MovieDto movie = movieService.get(id);
 
     model.addAttribute("movie", movie);
-
     return "update";     // response with the update.html page
   }
 
@@ -61,5 +58,4 @@ public class MovieController {
 
     return "redirect:/"; // redirect to the root('/') url.
   }
-
 }

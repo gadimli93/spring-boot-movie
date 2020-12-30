@@ -17,10 +17,8 @@ public interface MovieRepository {
   void delete(long id);
 
   MovieDto select(long id);
-  MovieDto selectByIdAndName(@Param("id") long id, @Param("movName") String movName);
 
   List<MovieDto> selectAll(@Param("movName") String movName,
                            @Param("movYear") Integer movYear,
                            @Param("movLang") String movLang);
-
 }
