@@ -17,20 +17,7 @@ import java.util.List;
 public class MovieRepositoryTest {
 
     /*
-    @Autowired
-    private MovieRepository movieRepository;
-
-    // @Before => @Test => @After
-    @Before
-    public void before() {
-    }
-
-    // @Before => @Test => @After
-    @After
-    public void after() {
-    }
-
-    // TODO: must test all of apis in MovieRepository.
+    // <-- JUNIT TEST OF PREVIOUS MOVIE_REPOSITORY-->>
 
     @Test
     public void insert() {
@@ -311,5 +298,4 @@ public class MovieRepositoryTest {
         }
     }
      */
-
 }

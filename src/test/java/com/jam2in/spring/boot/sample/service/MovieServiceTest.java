@@ -6,8 +6,6 @@
 //import org.junit.Test;
 //import org.junit.runner.RunWith;
 //import org.mockito.Mockito;
-//import org.mockito.invocation.InvocationOnMock;
-//import org.mockito.stubbing.Answer;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.test.context.SpringBootTest;
 //import org.springframework.boot.test.context.TestConfiguration;
@@ -32,7 +30,7 @@
 //    @MockBean
 //    private MovieRepository movieRepository;
 //
-//    // TODO: must test all of apis in MovieService.
+//    // <-- JUNIT TEST OF PREVIOUS MOVIE_SERVICE-->>
 //    @Test
 //    public void create() {
 //      // given
@@ -161,8 +159,6 @@
 //                .thenReturn(movieDto);
 //
 //        // when
-//
-//
 //        // then
 //
 //    }
