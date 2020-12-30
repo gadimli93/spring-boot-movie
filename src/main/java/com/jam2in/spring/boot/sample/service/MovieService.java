@@ -36,5 +36,4 @@ public class MovieService {
   public List<MovieDto> getAll(String movName, Integer movYear, String movLang) {
     return movieRepository.selectAll(movName, movYear, movLang);
   }
-
 }
