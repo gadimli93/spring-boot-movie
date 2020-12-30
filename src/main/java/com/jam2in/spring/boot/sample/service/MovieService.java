@@ -33,10 +33,6 @@ public class MovieService {
     return movieRepository.select(id);
   }
 
-  public MovieDto getByIdAndName(long id, String movName) {
-   return movieRepository.selectByIdAndName(id, movName);
-   }
-
   public List<MovieDto> getAll(String movName, Integer movYear, String movLang) {
     return movieRepository.selectAll(movName, movYear, movLang);
   }
